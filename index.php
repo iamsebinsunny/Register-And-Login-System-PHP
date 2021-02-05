@@ -18,7 +18,7 @@
                     </div>
                     <br>
                     <h3 class="text-center">WELCOME TO</h3>
-                    <h6 class="text-center">MoonLight</h6>
+                    <h3 class="text-center">Car Rental</h3>
                     <div class="form-group row">
                         <div class="col-lg-12 text-center">
                             <a href="about.php">
@@ -35,7 +35,7 @@
                 <?php
                 if (isset($_GET["error"])) {
                     if ($_GET["error"] == "emptyFields") {
-                        echo '<div class="alert alert-danger text-center"><button type="button" class="close" data-dismiss="alert">&times;</button>Please fill in all fiels!</div>';
+                        echo '<div class="alert alert-danger text-center"><button type="button" class="close" data-dismiss="alert">&times;</button>Please fill in all fields!</div>';
                     } else if ($_GET["error"] == "wrongPwd") {
                         echo '<div class="alert alert-danger text-center"><button type="button" class="close" data-dismiss="alert">&times;</button>Wrong Password!</div>';
                     } else if ($_GET["error"] == "noUsers") {

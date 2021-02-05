@@ -7,13 +7,13 @@ if (isset($_POST['login'])) {
     $pass = $_POST['pass'];
 
     if (empty($uName) || empty($pass)) {
-        header("Location: ../login.php?error=emptyFields&uName=" . $uName);
+        header("Location: ../index.php?error=emptyFields&uName=" . $uName);
         exit();
     } else {
         $sql = "SELECT * FROM users WHERE uName=? OR uMail=?;";
         $stmt = mysqli_stmt_init($db);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
-            header("Location: ../login.php?error=sqlError");
+            header("Location: ../index.php?error=sqlError");
             exit();
         } else {
             mysqli_stmt_bind_param($stmt , "ss", $uName, $uName);
@@ -22,27 +22,28 @@ if (isset($_POST['login'])) {
             if ($row = mysqli_fetch_assoc($result)) {
                 $pwdCheck = password_verify($pass, $row['pass']);
                 if ($pwdCheck == false) {
-                    header("Location: ../login.php?error=wrongPwd");
+                    header("Location: ../index.php?error=wrongPwd");
                     exit();
                 } elseif ($pwdCheck == true) {
                     session_start();
                     $_SESSION['userID'] = $row['uid'];
                     $_SESSION['userName'] = $row['uName'];
 
-                    header("Location: ../user.php?login=success");
+                    // header("Location: ../user.php?index=success");
+                       header("Location: ../userHomeScreen.php");
                     exit();
                 } else {
-                    header("Location: ../login.php?error=wrongPwd");
+                    header("Location: ../index.php?error=wrongPwd");
                     exit();
                 }
             } else {
-                header("Location: ../login.php?error=noUsers");
+                header("Location: ../index.php?error=noUsers");
                 exit();
             }
         }
     }
 
 } else {
-    header("Location: ../login.php");
+    header("Location: ../index.php");
     exit();
 }

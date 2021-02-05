@@ -21,7 +21,7 @@
                     </div>
                     <br>
                     <h3 class="text-center">WELCOME TO</h3>
-                    <h6 class="text-center">MoonLight</h6> <br>
+                    <h3 class="text-center">Car Rental</h3> <br>
                     <div class="form-group row">
                         <div class="col-lg-12 text-center">
                             <a href="about.php">
@@ -172,7 +172,7 @@
                     </div> <br> <br>
                     <div class="form-group row">
                         <div class="input-group col-lg-12 col-md-12 col-sm-12">
-                            <p>Already A Member ? </p><a href="login.php" style="text-decoration: none;"> &nbsp; Login </a>
+                            <p>Already A Member ? </p><a href="index.php" style="text-decoration: none;"> &nbsp; Login </a>
                         </div>
                     </div>
 
@@ -187,7 +187,7 @@
             <div class="col-lg-6 md-12 text-center hide-sm" id="float-left">
                 <div class="container">
                     <h3 class="text-center">WELCOME TO</h3>
-                    <h6 class="text-center">MoonLight</h6> <br>
+                    <h3 class="text-center">Car Rental</h3> <br>
                     <div class="form-group row">
                         <div class="col-lg-12 text-center">
                             <a href="about.php">

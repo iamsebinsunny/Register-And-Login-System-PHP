@@ -4,7 +4,6 @@
     	}
 ?>
 
-<!doctype html>
 <html lang="en">
   <head>
   
@@ -16,7 +15,7 @@
   <body>
   	<!--navbar -->
   	<nav class="navbar navbar-expand-lg navbar-light  text-white display-4" style="background-color: #cbcdca; font: caption; ">
-  <a class="navbar-brand text-white" href="userHomeScreen.php"><h2>Home</h2></a>
+  <a class="navbar-brand text-white" href="adminHomeScreen.php"><h2>Admin Panel</h2></a>
   
 
     <div class="navbar-nav ml-auto">
@@ -46,11 +45,5 @@
    
   </body>
 </html>
-
-
-
-
-
-
 
 

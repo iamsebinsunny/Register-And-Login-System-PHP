@@ -35,7 +35,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-6 md-12 mb-12 text-center" id="float-right">
+            <div class="col-lg-6 md-12 mb-12 text-center" style="background: #f1f1f166" id="float-right">
                 <h2 class="text-center">REGISTER</h2> <br>
 
                 <?php
@@ -170,11 +170,7 @@
                         </div>
                     </div>
 
-                    <div class="text-center col-lg-12 home-btn-hide">
-                        <a href="index.php" class="text-center">
-                            <button class="btn btn-success" type="button">Back Home</button>
-                        </a>
-                    </div>
+                    
                 </form>
             </div>
             <br><br><br>

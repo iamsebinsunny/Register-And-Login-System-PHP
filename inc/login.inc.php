@@ -28,10 +28,14 @@ if (isset($_POST['login'])) {
                     session_start();
                     $_SESSION['userID'] = $row['uid'];
                     $_SESSION['userName'] = $row['uName'];
+                    $_SESSION['firstName'] = $row['fName'];
 
-                    // header("Location: ../user.php?index=success");
-                       header("Location: ../userHomeScreen.php");
-                    exit();
+                    if($_SESSION["userName"] != "admin") {
+                         header("Location: ../userHomeScreen.php");
+                         exit();
+                        }else{
+                      header("location: ../adminHomeScreen.php");
+                    exit();}
                 } else {
                     header("Location: ../index.php?error=wrongPwd");
                     exit();

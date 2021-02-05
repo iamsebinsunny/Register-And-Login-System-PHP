@@ -22,7 +22,7 @@
                     <div class="form-group row">
                         <div class="col-lg-12 text-center">
                             <a href="about.php">
-                                <button class="btn btn-primary">About US</button>
+                                <button class="btn btn-dark">About US</button>
                             </a>
                         </div>
                     </div>
@@ -30,7 +30,7 @@
             </div>
 
             <div class="col-lg-6 col-md-12 col-mb-12 col-sm-12" id="float-right">
-                <h2 class="text-center">Login</h2> <br>
+                <h2 class="text-center">LOGIN</h2> <br>
 
                 <?php
                 if (isset($_GET["error"])) {
@@ -67,31 +67,21 @@
                     </div>
 
                     <div class="row text-center" id="btn">
-                        <div class="input-group col-lg-4 col-md-4 col-sm-6 col-6 text-left">
-                            <button name="login" class="btn btn-primary" type="submit">Login</button>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-6 text-center">
+                            <button name="login" class="btn btn-dark" type="submit">Login</button>
                         </div>
 
-                        <div class="input-group col-lg-4 col-md-4 col-sm-6 col-6 text-left">
-                            <button class="btn btn-primary" type="reset" id="reset-btn">Reset</button>
-                        </div>
-
-                        <div class="input-group col-lg-4 col-md-4 col-sm-6 col-6 text-left home-btn">
-                            <a href="index.php">
-                                <button class="btn btn-success" type="button">Back Home</button>
-                            </a>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-6 text-center">
+                            <button class="btn btn-dark" type="reset" id="reset-btn">Clear</button>
                         </div>
                     </div> <br> <br>
                     <div class="form-group row">
                         <div class="input-group col-lg-12 col-md-12 col-sm-12">
-                            <p>New Member ? </p><a href=" signin.php" style="text-decoration: none;"> &nbsp; Register </a>
+                            <p>New Member ? </p><a href=" signin.php" style="text-decoration: none; color: #f5f5f5"> &nbsp; Register </a>
                         </div>
                     </div>
 
-                    <div class="text-center row home-btn-hide">
-                        <a href="index.php" class="text-center">
-                            <button class="btn btn-success" type="button">Back Home</button>
-                        </a>
-                    </div>
+                    
                 </form>
             </div>
         </div>

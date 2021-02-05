@@ -13,15 +13,17 @@
 
 
 body {
-    background: #5C258D;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #4389A2, #5C258D);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #4389A2, #5C258D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-image: url('../image/carimage.jpg');
+     background-repeat: no-repeat;
+       background-attachment: fixed;
+  background-size: 100% 100%;
+
 }
 #float-right {
-    /* background: #e98b8b; */
-    background: #f1f1f166;  /* fallback for old browsers */
-    /*background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
-    /*background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    background: #f1f1f166; 
+   
     padding: 40px 75px 0px 30px;
     width: 45%;
     border-radius: 2%;
@@ -46,7 +48,7 @@ body {
     font-size: 50px;
 }
 #float-left h3, #float-left h6 {
-    color: white;
+    color: black;
 }
 .home-btn-hide {
     margin: 0px auto;

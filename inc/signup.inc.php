@@ -66,7 +66,7 @@ if (isset($_POST['signup'])) {
                 $_SESSION['uMail'] = $uMail;
 
                 // header("Location: ../signin.php?signup=success");
-                header("Location: ../login.php");
+                header("Location: ../index.php");
                 exit();
             }
         }

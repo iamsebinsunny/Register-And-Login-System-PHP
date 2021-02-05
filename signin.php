@@ -8,7 +8,10 @@
     <title>Register</title>
 </head>
 
-<body>
+<body style="   background-image: url('./image/carimage.jpg');
+     background-repeat: no-repeat;
+       background-attachment: fixed;
+  background-size: 100% 100%;">
     <br> <br> <br>
 
     <div class="container signin-container text-center">
@@ -20,12 +23,12 @@
                         <img src="image/arrow-down.png" alt="">
                     </div>
                     <br>
-                    <h3 class="text-center">WELCOME TO</h3>
-                    <h3 class="text-center">Car Rental</h3> <br>
+                    <h3 class="text-center" style="color: black;">WELCOME TO</h3>
+                    <h3 class="text-center" style="color: black;">Car Rental</h3> <br>
                     <div class="form-group row">
                         <div class="col-lg-12 text-center">
                             <a href="about.php">
-                                <button class="btn btn-primary">About US</button>
+                                <button class="btn btn-dark">About US</button>
                             </a>
                         </div>
                     </div>
@@ -33,7 +36,7 @@
             </div>
 
             <div class="col-lg-6 md-12 mb-12 text-center" id="float-right">
-                <h2 class="text-center">Register</h2> <br>
+                <h2 class="text-center">REGISTER</h2> <br>
 
                 <?php
                 if (isset($_GET["error"])) {
@@ -55,9 +58,6 @@
                         echo '<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">&times;</button>Should Contain At Least 1 Number!</div>';
                     }
                 }
-                // else {
-                //         echo '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button>Sign Up Successfull !</div>';
-                // }
                 ?>
                 <form action="inc/signup.inc.php" method="POST" class="text-center" enctype="multipart/form-data">
 
@@ -106,7 +106,7 @@
                         </div>
                         <div class="input-group col-lg-6 col-md-6 col-sm-12 names">
                             <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                <span class="input-group-text"><i class="fas fa-phone"></i></span>
                             </div>
                             <?php
                             if (isset($_GET['phone'])) {
@@ -156,23 +156,17 @@
                     </div>
 
                     <div class="row" id="btn">
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-4 text-left">
-                            <button class="btn btn-primary" type="submit" name="signup">Signup</button>
+                        <div class="col-lg-6 col-md-6 col-sm-4 col-4 text-center">
+                            <button class="btn btn-dark" type="submit" name="signup">Signup</button>
                         </div>
 
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-4 text-left">
-                            <button class="btn btn-primary" type="reset" id="reset-btn">Reset</button>
-                        </div>
-
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-4 text-left home-btn">
-                            <a href="index.php">
-                                <button class="btn btn-success" type="button">Back Home</button>
-                            </a>
+                        <div class="col-lg-6 col-md-6 col-sm-4 col-4 text-center">
+                            <button class="btn btn-dark" type="reset" id="reset-btn">Clear</button>
                         </div>
                     </div> <br> <br>
                     <div class="form-group row">
                         <div class="input-group col-lg-12 col-md-12 col-sm-12">
-                            <p>Already A Member ? </p><a href="index.php" style="text-decoration: none;"> &nbsp; Login </a>
+                            <p>Already a member ? </p><a href="index.php" style="text-decoration: none; color: #f5f5f5"> &nbsp; Login </a>
                         </div>
                     </div>
 
@@ -186,12 +180,12 @@
             <br><br><br>
             <div class="col-lg-6 md-12 text-center hide-sm" id="float-left">
                 <div class="container">
-                    <h3 class="text-center">WELCOME TO</h3>
-                    <h3 class="text-center">Car Rental</h3> <br>
+                    <h3 class="text-center" style="color: black;">WELCOME TO</h3>
+                    <h3 class="text-center" style="color: black;">Car Rental</h3> <br>
                     <div class="form-group row">
                         <div class="col-lg-12 text-center">
                             <a href="about.php">
-                                <button class="btn btn-primary">About US</button>
+                                <button class="btn btn-dark">About US</button>
                             </a>
                         </div>
                     </div> <br> <br>

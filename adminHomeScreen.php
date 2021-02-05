@@ -1,4 +1,6 @@
-<?php session_start();
+<?php 
+session_start();
+require 'inc/config.inc.php';
  if (!isset($_SESSION["userName"])) {
        	header('location: ../index.php');
     	}
@@ -41,6 +43,39 @@
          echo "Found User: ", $loggenOnUser, "<br />";
     	} 
 	?>
+<!-- table -->
+
+<?php
+
+
+$sql = "SELECT * FROM users WHERE uid != '7'";
+$result = mysqli_query($db, $sql); // First parameter is just return of "mysqli_connect()" function
+echo "<br>";
+echo "<table class='table'>";
+echo "<thead>
+    <tr>
+      <th scope='col'>UsrId</th>
+      <th scope='col'>First Name</th>
+      <th scope='col'>Last Name</th>
+      <th scope='col'>User Name</th>
+       <th scope='col'>Phone No</th>
+      <th scope='col'>User Email</th>
+      <th scope='col'>Password</th>
+      <th scope='col'>edit</th>
+       <th scope='col'>delete</th>
+    </tr>
+  </thead>";
+while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
+	echo "<tbody>";
+    echo "<tr>";
+    foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
+        echo "<td>" . $value . "</td>"; // I just did not use "htmlspecialchars()" function. 
+    }
+    echo "</tr>";
+    echo "</tbody>";
+}
+echo "</table>";
+?>
 
    
   </body>

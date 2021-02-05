@@ -53,8 +53,7 @@ if (isset($_POST['signup'])) {
                     header("Location: ../signin.php?error=sqlError");
                     exit();
                 } else {
-                    $passHashed = password_hash($pass, PASSWORD_DEFAULT);
-                    mysqli_stmt_bind_param($stmt, "ssssss", $uName, $lName, $uName, $phone, $uMail, $passHashed);
+                    mysqli_stmt_bind_param($stmt, "ssssss", $uName, $lName, $uName, $phone, $uMail, $pass);
                     mysqli_stmt_execute($stmt);
                 }
 
@@ -65,7 +64,6 @@ if (isset($_POST['signup'])) {
                 $_SESSION['contactNumber'] = $phone;
                 $_SESSION['uMail'] = $uMail;
 
-                // header("Location: ../signin.php?signup=success");
                 header("Location: ../index.php");
                 exit();
             }

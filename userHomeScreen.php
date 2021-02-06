@@ -1,7 +1,13 @@
-<?php session_start();
+<?php 
+session_start();
  if (!isset($_SESSION["userName"])) {
        	header('location: ../index.php');
     	}
+
+if (isset($_SESSION["userName"])) {
+         $loggenOnUser = $_SESSION["firstName"];
+         $userid  = $_SESSION["userID"];
+      } 
 ?>
 
 
@@ -23,11 +29,11 @@
       <li class="nav-item dropdown ">
       	<ul>
       		 <a class="navbar-brand dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        	<?php  echo  $_SESSION["firstName"]; ?>
+        	<?php  echo $loggenOnUser ?>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another </a>
+          <a class="dropdown-item" href="inc/editUser.inc.php?uid= <?php echo $userid ?>">Edit Account</a>
           <a class="dropdown-item" href="inc/logoutServer.inc.php">Log out</a>
         </div>
       </li>
@@ -36,12 +42,6 @@
   </nav>
 
 
-    <?php
-     if (isset($_SESSION["userName"])) {
-         $loggenOnUser = $_SESSION["firstName"];
-         echo "Found User: ", $loggenOnUser, "<br />";
-    	} 
-	?>
 
    
   </body>

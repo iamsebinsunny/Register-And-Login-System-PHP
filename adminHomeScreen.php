@@ -9,9 +9,9 @@ require 'inc/config.inc.php';
 <html lang="en">
   <head>
   
-
+   <link rel="stylesheet" href="css/adminUserScreen.css">
     <?php include "head-link.php" ?>
-    <title>Home</title>
+    <title>Admin</title>
   </head>
 
   <body>
@@ -62,16 +62,24 @@ while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary
 	echo "<tbody>";
     echo "<tr>";
     foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
-        echo "<td>" . $value . "</td>"; // I just did not use "htmlspecialchars()" function. 
+      if($field === 'uid') {
+        $uid = $value;
+      }
+      echo "<td>" . $value . "</td>"; // I just did not use "htmlspecialchars()" function. 
     }
-    echo "<td> edit icon </td>";
-    echo "<td> delete icon </td>";
+    echo "<td> <a class='fas fa-user-edit'  href='inc/editUser.inc.php?uid= $uid'></a> </td>";
+    echo "<td> <a class='fas fa-trash-alt' onClick='myFunction()' href='inc/deleteUser.inc.php?uid= $uid'></a> </td>";
     echo "</tr>";
-    echo "<body>";
+    echo "</tbody>";
 }
 echo "</table>";
-?>
 
+?>
+<script>
+function myFunction() {
+  alert("Account will be deleted permenently");
+}
+</script>
    
   </body>
 </html>

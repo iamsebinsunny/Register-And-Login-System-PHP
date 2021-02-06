@@ -20,7 +20,11 @@ if (isset($_POST['login'])) {
             mysqli_stmt_execute($stmt);
             $result = mysqli_stmt_get_result($stmt);
             if ($row = mysqli_fetch_assoc($result)) {
-                $pwdCheck = password_verify($pass, $row['pass']);
+                if ($pass ===  $row['pass']) {
+                     $pwdCheck = true;
+                }else {
+                     $pwdCheck = false;
+                }  
                 if ($pwdCheck == false) {
                     header("Location: ../index.php?error=wrongPwd");
                     exit();

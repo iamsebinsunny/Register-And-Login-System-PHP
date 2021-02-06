@@ -35,26 +35,19 @@ require 'inc/config.inc.php';
   </ul>
   </div>
   </nav>
-
-
-    <?php
-     if (isset($_SESSION["userName"])) {
-         $loggenOnUser = $_SESSION["firstName"];
-         echo "Found User: ", $loggenOnUser, "<br />";
-    	} 
-	?>
+ 
 <!-- table -->
 
 <?php
 
 
-$sql = "SELECT * FROM users WHERE uid != '7'";
+$sql = "SELECT * FROM users WHERE uName != 'admin'";
 $result = mysqli_query($db, $sql); // First parameter is just return of "mysqli_connect()" function
 echo "<br>";
 echo "<table class='table'>";
 echo "<thead>
     <tr>
-      <th scope='col'>UsrId</th>
+      <th scope='col'>UserId</th>
       <th scope='col'>First Name</th>
       <th scope='col'>Last Name</th>
       <th scope='col'>User Name</th>
@@ -71,8 +64,10 @@ while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary
     foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
         echo "<td>" . $value . "</td>"; // I just did not use "htmlspecialchars()" function. 
     }
+    echo "<td> edit icon </td>";
+    echo "<td> delete icon </td>";
     echo "</tr>";
-    echo "</tbody>";
+    echo "<body>";
 }
 echo "</table>";
 ?>
